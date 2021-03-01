@@ -16,13 +16,14 @@ var numeriUtente = [];
 var punteggio = 0;
 var tentativi = 84;  //(100 - 16) volte
 var numeroUtente;
-var vietato = false;
+var vietato = false; //numeri gia estratti dal computer
 var numeroMax;
 var numeroMin;
 var livello
 
 
-//BONUS da verificare funzionamento "da 1 a 100"
+//BONUS da verificare il funzionamento"da 1 a 100", "da 1 a 80", da "1 a 50" 
+
 // chiedo all'utente il livello di difficoltà tra 0, 1, 2
 livello = parseInt(prompt("Inserisci il livello di difficoltà: 0, 1 oppure 2"));
 while (livello != 0 && livello != 1 && livello != 2) {
@@ -84,14 +85,14 @@ while (numeriUtente.length < tentativi && vietato == false) {
     }
 }
 }
+console.log("trovato? " + vietato);
+console.log("punteggio " + punteggio);
 document.getElementById("punteggio").innerHTML = "Hai totalizzato un punteggio di " + punteggio + " punti!";
 
-//da verificare il giusto funzionamento
 if (numeriUtente.length == tentativi) {
     document.getElementById("messaggio").innerHTML = "Hai vinto!";
     console.log("hai vinto");
 }
-//////////////////////
 
 // funzione che genera numero random
 function generaNumeriRandom(min, max) {
