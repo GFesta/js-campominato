@@ -34,19 +34,19 @@ switch (livello) {
         numeroMin = 1; 
         numeroMax = 100; 
         possibilita = 84; 
-    var titoloDomanda = "Inserisci un numero da 1 a 100"; 
+        titoloDomanda = parseInt(prompt("Inserisci un numero da 1 a 100")); 
     break; 
     case 1: 
         numeroMin = 1; 
         numeroMax = 80; 
         possibilita = 64; 
-        titoloDomanda = "Inserisci un numero da 1 a 80"; 
+        titoloDomanda = parseInt(prompt("Inserisci un numero da 1 a 80")); 
     break; 
     case 2: 
         numeroMin = 1; 
         numeroMax = 50; 
         possibilita = 34; 
-        titoloDomanda = "Inserisci un numero da 1 a 50"; 
+        titoloDomanda = parseInt(prompt("Inserisci un numero da 1 a 50")); 
     break; 
 } 
 //BONUS 
@@ -82,8 +82,8 @@ while (numeriUtente.length < tentativi && numBomba == false) {
         } 
     } 
 } 
-console.log(" numero Bomba " + numBomba);
-console.log("punteggio" + punteggio);
+console.log("numeroBomba " + numBomba);
+console.log("punteggio " + punteggio);
 document.getElementById("punteggio").innerHTML = "Hai totalizzato un punteggio di " + punteggio + " punti!"; 
 
 //l'utente vince SE ha completato tutti i tentativi senza beccare le "numero bombe"
